@@ -321,9 +321,7 @@ export const getMarketerProjects = async (req, res) => {
     }
 };
 export const getLeaderboard = async (req, res) => {
-
     try {
-
         const [rows] = await db.query(`
             SELECT
                 full_name,
@@ -334,17 +332,11 @@ export const getLeaderboard = async (req, res) => {
             FROM marketers
             ORDER BY points DESC
         `);
-
         res.json(rows);
-
     } catch (err) {
-
         console.error(err);
-
         res.status(500).json({
             message: "Server Error"
         });
-
     }
-
 };

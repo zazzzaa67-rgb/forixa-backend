@@ -15,7 +15,8 @@ export const createCheckout = async (req,res)=>{
             }
         });
         console.log(transaction.checkout.url);
-    res.json({
+        res.json({
+        transactionId: transaction.id,
         checkoutUrl: transaction.checkout.url
         });
     }catch(err){
