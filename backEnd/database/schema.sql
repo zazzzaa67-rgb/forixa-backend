@@ -1,4 +1,4 @@
-USE forixa;
+USE railway;
 CREATE TABLE IF NOT EXISTS clients (
     id INT AUTO_INCREMENT PRIMARY KEY,
     full_name VARCHAR(255) NOT NULL,
