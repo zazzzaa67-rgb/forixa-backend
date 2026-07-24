@@ -74,3 +74,13 @@ export const getClientToken = (req, res) => {
         clientToken: process.env.PADDLE_CLIENT_TOKEN
     });
 };
+export const paddleWebhook = async (req, res) => {
+    try {
+        console.log("========== WEBHOOK ==========");
+        console.log(req.body.toString());
+        res.sendStatus(200);
+    } catch (err) {
+        console.error(err);
+        res.sendStatus(500);
+    }
+};
