@@ -59,9 +59,7 @@ export const createCheckout = async (req, res) => {
             WHERE id = ?`,
             [paymentId, project.id]
         );
-        res.json({
-            checkoutUrl: transaction.checkout.url
-        });
+        res.json({checkoutUrl: transaction.checkout.url});
     } catch (err) {
         console.error(err);
         res.status(500).json({
