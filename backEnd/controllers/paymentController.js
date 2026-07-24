@@ -55,7 +55,7 @@ export const createCheckout = async (req, res) => {
         );
         await db.query(
             `UPDATE projects
-            SET payment_id = ?, 
+            SET payment_id = ?
             WHERE id = ?`,
             [paymentId, project.id]
         );
