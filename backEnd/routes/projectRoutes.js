@@ -11,6 +11,7 @@ import {createProject ,
         getLeaderboard} from '../controllers/projectControllers.js'
 import { isAdmin } from "../middleware/authMiddleware.js";
 import {isAuthenticated} from '../middleware/authMiddleware.js'
+import { AiChat } from '../controllers/AIchatbotController.js';
 const router = express.Router();
 router.post("/", createProject);
 router.get("/", isAdmin, getProjects);
@@ -21,4 +22,5 @@ router.get("/leaderboard", getLeaderboard);
 router.get("/:id", isAdmin, getProject);
 router.put("/:id/status", isAdmin, updateProjectStatus);
 router.put("/:id/price", isAdmin, updatProjectPrice);
+router.put('/chat' , AiChat)
 export default router
