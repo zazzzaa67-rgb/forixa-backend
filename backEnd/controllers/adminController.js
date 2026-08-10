@@ -19,6 +19,7 @@ export const adminLogin = (req, res) => {
             expiresIn: "7d"
         }
     );
+    
     res.json({
         message: "Login success",
         token

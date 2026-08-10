@@ -1,4 +1,4 @@
-import db from "../config/db.js";
+// import db from "../config/db.js";
 import paddle from "../config/paddle.js";
 
 export const createCheckout = async (req, res) => {

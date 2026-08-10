@@ -8,5 +8,5 @@ router.post('/marketer' , marketer)
 router.post('/login', login)
 router.get('/profile' ,isAuthenticated,profile)
 router.get('/logout' , isAuthenticated , logout)
-router.post('/visitor' , addVisitor)
+// router.post('/visitor' , addVisitor)
 export default router;
