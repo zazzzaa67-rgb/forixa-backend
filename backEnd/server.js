@@ -1,12 +1,11 @@
 import express from 'express'
 import cors from 'cors'
 import bcrypt from 'bcrypt'
-import dotenv from 'dotenv'
+import "dotenv/config";
 import authRoutes from './routes/authRoutes.js'
 import projectRoutes from "./routes/projectRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import paymentRoutes from "./routes/paymentRoutes.js";
-dotenv.config()
 const app = express()
 app.use(
     "/api/payment/webhook",

@@ -53,5 +53,4 @@ export const isAdmin = (req, res, next) => {
             message: "Invalid Token"
         });
     }
-
 };
