@@ -157,7 +157,6 @@ export const addVisitor = async (req, res) => {
                 message: "Marketer not found"
             });
         }
-
         // 2. Increase visitors
         const { error: updateError } =
             await supabase
